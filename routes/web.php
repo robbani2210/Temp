@@ -18,5 +18,5 @@ use App\Http\Controllers\Device_dataController;
 //     return view('welcome');
 // });
 
-// Route::view('/', 'homepage');
-Route::get('/', [Device_dataController::class, 'show']);
+Route::view('/', 'dashboard');
+Route::get('/device', [Device_dataController::class, 'show']);
