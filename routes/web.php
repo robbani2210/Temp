@@ -19,4 +19,6 @@ use App\Http\Controllers\Device_dataController;
 // });
 
 Route::view('/', 'dashboard');
+Route::view('/sensor', 'sensor');
+Route::view('/about', 'about');
 Route::get('/device', [Device_dataController::class, 'show']);
