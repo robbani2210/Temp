@@ -14,7 +14,7 @@
         @show
 
         <div class="flex flex-col">
-            <div class="md:ml-32">
+            <div class="md:ml-48">
                 @yield('content')
             </div>
         </div>
