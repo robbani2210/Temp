@@ -28,4 +28,5 @@ Route::view('/evaporator-pressure', 'sensor.pressure.evaporator');
 Route::view('/main-motor-current', 'main-motor-current');
 Route::view('/login', 'auth.login');
 Route::view('/register', 'auth.register');
-Route::get('/device', [Device_dataController::class, 'show']);
+Route::view('/device', 'device');
+// Route::get('/device', [Device_dataController::class, 'show']);

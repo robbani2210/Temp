@@ -8,6 +8,5 @@ class device_data extends Model
 {
     protected $table = 'device_data';
     protected $primaryKey = 'timestamp';
-    // protected $fillable = ['Id', 'Price', 'Title'];
 }
 
