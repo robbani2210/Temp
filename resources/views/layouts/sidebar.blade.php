@@ -1,17 +1,54 @@
-<aside id="logo-sidebar" class="fixed top-0 left-0 z-50 w-64 h-screen drop-shadow-xl">
-   <div class="h-full px-3 py-4 overflow-y-auto ">
-      <img src="{{ asset('img/logo unpad x gmf.png') }}" class="h-6 sm:h-7" alt="Flowbite Logo" />
-      
-      <ul class="space-y-2 font-medium">
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-3xl text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
+   <span class="sr-only">Open sidebar</span>
+   <i class="ph-bold ph-list"></i>
+</button>
+
+<aside id="default-sidebar" class="fixed top-0 left-0 z-40 w-52 h-screen transition-transform -translate-x-full sm:translate-x-0 drop-shadow-xl" aria-label="Sidebar">
+   <div class="h-full px-3 py-4 overflow-y-auto bg-gray-50">
+      <img src="{{ asset('img/logo unpad x gmf.png') }}" class="h-7 mt-4 md:h-9 mx-auto" />
+      <ul class="space-y-2 mt-12 mx-2">
          <li>
-            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-               <svg class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
-                  <path d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"/>
-                  <path d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"/>
-               </svg>
-               <span class="ml-3">Dashboard</span>
+            <a href="/" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
+               <span class="ph-light ph-house text-3xl"></span>
+               <span class="ml-2">Dashboard</span>
+            </a>
+         </li>
+         <li>
+            <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                  <span class="ph-light ph-cpu text-3xl flex-shrink-0 transition duration-75 group-hover:text-gray-900"></span>
+                  <span class="flex-1 ml-2 text-left whitespace-nowrap">Sensor</span>
+                  <i class="ph-light ph-caret-down ml-6 text-sm"></i>
+            </button>
+            <ul id="dropdown-example" class="hidden py-2 space-y-2 text-sm">
+                  <li>
+                     <a href="/temperature-chilled-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Chilled Water</a>
+                  </li>
+                  <li>
+                     <a href="/temperature-cooling-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Cooling Water</a>
+                  </li>
+                     <a href="/condenser-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Condenser Pressure</a>
+                  </li>
+                  <li>
+                     <a href="/evaporator-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Evaporator Pressure</a>
+                  </li>
+                  <li>
+                     <a href="/main-motor-current" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Main Motor Current</a>
+                  </li>
+            </ul>
+         </li>
+         <li>
+            <a href="/device" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
+               <span class="ph-light ph-monitor text-3xl"></span>
+               <span class="ml-2">Device</span>
+            </a>
+         </li>
+         <li>
+            <a href="/about" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
+               <span class="ph-light ph-question text-3xl"></span>
+               <span class="ml-2">About</span>
             </a>
          </li>
       </ul>
    </div>
 </aside>
+
