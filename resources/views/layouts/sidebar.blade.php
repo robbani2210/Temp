@@ -34,6 +34,18 @@
                   <li>
                      <a href="/main-motor-current" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Main Motor Current</a>
                   </li>
+                  <li>
+                     <a href="/oil-tank" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Tank</a>
+                  </li>
+                  <li>
+                     <a href="/oil-capacity" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Capacity</a>
+                  </li>
+                  <li>
+                     <a href="/oil-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Pressure</a>
+                  </li>
+                  <li>
+                     <a href="/vane-position" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Vane Position</a>
+                  </li>
             </ul>
          </li>
          <li>
