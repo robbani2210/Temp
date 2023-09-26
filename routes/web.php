@@ -24,6 +24,7 @@ Route::view('/about', 'about');
 Route::view('/login', 'auth.login');
 Route::view('/register', 'auth.register');
 Route::view('/device', 'device');
+Route::view('/change', 'change');
 
 //sensor
 Route::view('/temperature-chilled-water', 'sensor.chilled-water');
