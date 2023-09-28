@@ -132,13 +132,13 @@
     <p class="menu-label">About</p>
     <ul class="menu-list">
       <li>
-        <a href="https://justboil.me/tailwind-admin-templates/free-dashboard/" class="has-icon">
+        <a href="#" class="has-icon">
           <span class="icon"><i class="mdi mdi-help-circle"></i></span>
           <span class="menu-item-label">About</span>
         </a>
       </li>
       <li>
-        <a href="https://github.com/justboil/admin-one-tailwind" class="has-icon">
+        <a href="#" class="has-icon">
           <span class="icon"><i class="mdi mdi-github-circle"></i></span>
           <span class="menu-item-label">GitHub</span>
         </a>
@@ -147,18 +147,6 @@
   </div>
 </aside>
 
-<!-- <section class="is-title-bar">
-  <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-    <ul>
-      <li>Admin</li>
-      <li>Tables</li>
-    </ul>
-    <a href="https://github.com/justboil/admin-one-tailwind" target="_blank" class="button blue">
-      <span class="icon"><i class="mdi mdi-github-circle"></i></span>
-      <span>GitHub</span>
-    </a>
-  </div>
-</section> -->
 
 <section class="is-hero-bar">
   <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
