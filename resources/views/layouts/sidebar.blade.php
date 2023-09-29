@@ -15,52 +15,51 @@
          </li>
          <li>
             <button type="button" class="flex items-center w-full p-2 text-base text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-                  <span class="ph-light ph-cpu text-3xl flex-shrink-0 transition duration-75 group-hover:text-gray-900"></span>
-                  <span class="flex-1 ml-2 text-left whitespace-nowrap">Sensor</span>
-                  <i class="ph-light ph-caret-down ml-6 text-sm"></i>
+               <span class="ph-light ph-cpu text-3xl flex-shrink-0 transition duration-75 group-hover:text-gray-900"></span>
+               <span class="flex-1 ml-2 text-left whitespace-nowrap">Sensor</span>
+               <i class="ph-light ph-caret-down ml-6 text-sm"></i>
             </button>
             <ul id="dropdown-example" class="hidden py-2 space-y-2 text-sm">
-                  <li>
-                     <a href="/temperature-chilled-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Chilled Water</a>
-                  </li>
-                  <li>
-                     <a href="/temperature-cooling-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Cooling Water</a>
-                  </li>
-                     <a href="/condenser-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Condenser Pressure</a>
-                  </li>
-                  <li>
-                     <a href="/evaporator-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Evaporator Pressure</a>
-                  </li>
-                  <li>
-                     <a href="/main-motor-current" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Main Motor Current</a>
-                  </li>
-                  <li>
-                     <a href="/oil-tank" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Tank</a>
-                  </li>
-                  <li>
-                     <a href="/oil-capacity" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Capacity</a>
-                  </li>
-                  <li>
-                     <a href="/oil-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Pressure</a>
-                  </li>
-                  <li>
-                     <a href="/vane-position" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Vane Position</a>
-                  </li>
-            </ul>
+               <li>
+                  <a href="/temperature-chilled-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Chilled Water</a>
+               </li>
+               <li>
+                  <a href="/temperature-cooling-water" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Temperature Cooling Water</a>
+               </li>
+               <a href="/condenser-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Condenser Pressure</a>
          </li>
          <li>
-            <a href="/device" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
-               <span class="ph-light ph-monitor text-3xl"></span>
-               <span class="ml-2">Device</span>
-            </a>
+            <a href="/evaporator-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Evaporator Pressure</a>
          </li>
          <li>
-            <a href="/about" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
-               <span class="ph-light ph-question text-3xl"></span>
-               <span class="ml-2">About</span>
-            </a>
+            <a href="/main-motor-current" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Main Motor Current</a>
          </li>
+         <li>
+            <a href="/oil-tank" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Tank</a>
+         </li>
+         <li>
+            <a href="/oil-capacity" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Capacity</a>
+         </li>
+         <li>
+            <a href="/oil-pressure" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Oil Pressure</a>
+         </li>
+         <li>
+            <a href="/vane-position" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg group hover:bg-gray-200">Vane Position</a>
+         </li>
+      </ul>
+      </li>
+      <li>
+         <a href="/device" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
+            <span class="ph-light ph-monitor text-3xl"></span>
+            <span class="ml-2">Device</span>
+         </a>
+      </li>
+      <li>
+         <a href="/about" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-200 group">
+            <span class="ph-light ph-question text-3xl"></span>
+            <span class="ml-2">About</span>
+         </a>
+      </li>
       </ul>
    </div>
 </aside>
-

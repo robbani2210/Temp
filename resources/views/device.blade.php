@@ -1,9 +1,237 @@
-@extends('layouts.base')
- 
-@section('title', 'Device')
+@extends('layouts.side-navbar')
  
 @section('content')
-    <div class="bg-[#F8F8F8] h-screen">
+
+<section class="is-hero-bar">
+  <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+    <h2 class="title">
+      Device Page
+    </h2>
+  </div>
+</section>
+
+<div class="card mb-6">
+        <header class="card-header">
+            <p class="card-header-title">
+                <span class="icon"><i class="mdi mdi-finance"></i></span>
+                Temperature
+            </p>
+            <a href="#" class="card-header-icon">
+                <span class="icon"><i class="mdi mdi-reload"></i></span>
+            </a>
+        </header>
+        <div class="card-content">
+            <div class="chart-area">
+                <div class="h-full">
+                    <div class="chartjs-size-monitor">
+                        <div class="chartjs-size-monitor-expand">
+                            <div></div>
+                        </div>
+                        <div class="chartjs-size-monitor-shrink">
+                            <div></div>
+                        </div>
+                    </div>
+                    <canvas id="big-line-chart" width="2992" height="1000" class="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section main-section">
+    <div class="notification blue">
+      <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
+        <div>
+          <span class="icon"><i class="mdi mdi-buffer"></i></span>
+          <b>Responsive table</b>
+        </div>
+        <button type="button" class="button small textual --jb-notification-dismiss">Dismiss</button>
+      </div>
+    </div>
+    
+    <div class="card has-table">
+      <header class="card-header">
+        <p class="card-header-title">
+          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+          Clients
+        </p>
+        <a href="#" class="card-header-icon">
+          <button class="button small green --jb-modal" data-target="data-form-clien" type="button">
+            <span class="icon"><i class="mdi  mdi-plus"></i></span>
+          </button>
+        </a>
+      </header>
+      <div class="card-content">
+        <table>
+          <thead>
+          <tr>
+            <th class="number-cell">
+              <label class="checkbox">
+                <span>No.</span>
+              </label>
+            </th>
+            <th class="image-cell"></th>
+            <th>Name</th>
+            <th>Note</th>
+            <th>Division</th>
+            <th>Status</th>
+            <th>Timestamp</th>
+            <th></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="sample-number">
+                <span>1.</span>
+            </td>
+            <td class="image-cell">
+              <div class="image">
+                <img src="https://avatars.dicebear.com/v2/initials/rebecca-bauch.svg" class="rounded-full">
+              </div>
+            </td>
+            <td data-label="Name">Rebecca Bauch</td>
+            <td data-label="Note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, illum!</td>
+            <td data-label="Division">TL-01</td>
+            <td data-label="Status">Complete</td>
+            <td data-label="Timestamp">
+              <small class="text-gray-500" title="Oct 25, 2021">Oct 25, 2021</small>
+            </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                  <span class="icon"><i class="mdi mdi-pencil"></i></span>
+                </button>
+                <button class="button small red --jb-modal" data-target="modal-delete" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="sample-number">
+              <span>2.</span>
+          </td>
+            <td class="image-cell">
+              <div class="image">
+                <img src="https://avatars.dicebear.com/v2/initials/felicita-yundt.svg" class="rounded-full">
+              </div>
+            </td>
+            <td data-label="Name">Felicita Yundt</td>
+            <td data-label="Note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, esse.</td>
+            <td data-label="Division">TL-01</td>
+            <td data-label="Status"> Complete  </td>
+            <td data-label="Timestamp">
+              <small class="text-gray-500" title="Jan 8, 2021">Jan 8, 2021</small>
+            </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                  <span class="icon"><i class="mdi mdi-pencil"></i></span>
+                </button>
+                <button class="button small red --jb-modal" data-target="modal-delete" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="sample-number">
+              <span>3.</span>
+          </td>
+            <td class="image-cell">
+              <div class="image">
+                <img src="https://avatars.dicebear.com/v2/initials/mr-larry-satterfield-v.svg" class="rounded-full">
+              </div>
+            </td>
+            <td data-label="Name">Mr. Larry Satterfield V</td>
+            <td data-label="Note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, cumque!</td>
+            <td data-label="Division">TN-01</td>
+            <td data-label="Status"> Complete </td>
+            <td data-label="Timestamp">
+              <small class="text-gray-500" title="Dec 18, 2021">Dec 18, 2021</small>
+            </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                  <span class="icon"><i class="mdi mdi-pencil"></i></span>
+                </button>
+                <button class="button small red --jb-modal" data-target="modal-delete" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="sample-number">
+              <span>4.</span>
+          </td>
+            <td class="image-cell">
+              <div class="image">
+                <img src="https://avatars.dicebear.com/v2/initials/mr-broderick-kub.svg" class="rounded-full">
+              </div>
+            </td>
+            <td data-label="Name">Mr. Broderick Kub</td>
+            <td data-label="Note">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, rerum!</td>
+            <td data-label="Division">TE-02</td>
+            <td data-label="Status"> Active</td>
+            <td data-label="Timestamp">
+              <small class="text-gray-500" title="Sep 13, 2021">Sep 13, 2021</small>
+            </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                  <span class="icon"><i class="mdi mdi-pencil"></i></span>
+                </button>
+                <button class="button small red --jb-modal" data-target="modal-delete" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="sample-number">
+              <span>5.</span>
+          </td>
+            <td class="image-cell">
+              <div class="image">
+                <img src="https://avatars.dicebear.com/v2/initials/barry-weber.svg" class="rounded-full">
+              </div>
+            </td>
+            <td data-label="Name">Barry Weber</td>
+            <td data-label="Note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo.</td>
+            <td data-label="Division">TN-02</td>
+            <td data-label="Status"> Active</td>
+            <td data-label="Timestamp">
+              <small class="text-gray-500" title="Jul 24, 2021">Jul 24, 2021</small>
+            </td>
+            <td class="actions-cell">
+              <div class="buttons right nowrap">
+                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                  <span class="icon"><i class="mdi mdi-pencil"></i></span>
+                </button>
+                <button class="button small red --jb-modal" data-target="modal-delete" type="button">
+                  <span class="icon"><i class="mdi mdi-trash-can"></i></span>
+                </button>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="table-pagination">
+          <div class="flex items-center justify-between">
+            <div class="buttons">
+              <button type="button" class="button active">1</button>
+              <button type="button" class="button">2</button>
+              <button type="button" class="button">3</button>
+            </div>
+            <small>Page 1 of 3</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- <div class="bg-[#F8F8F8] h-screen">
         <div class="flex justify-between items-center py-4 px-6 bg-white border border-gray-200 rounded-lg shadow m-6 md:mx-12">
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-3">
@@ -160,5 +388,5 @@
                 <img src="{{ asset('img/image 2.png') }}" class="mt-8" />
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection

@@ -18,23 +18,25 @@ use App\Http\Controllers\Device_dataController;
 //     return view('welcome');
 // });
 
-Route::view('/', 'dashboard');
-Route::view('/sensor', 'sensor');
-Route::view('/about', 'about');
-Route::view('/login', 'auth.login');
-Route::view('/register', 'auth.register');
-Route::view('/device', 'device');
-Route::view('/change', 'change');
-Route::view('/admin', 'admin');
+Route::view('/', 'dashboard', ['title' => 'Dashboard']);
+Route::view('/sensor', 'sensor', ['title' => 'Sensor']);
+Route::view('/about', 'about', ['title' => 'About']);
+Route::view('/login', 'auth.login', ['title' => 'Login']);
+Route::view('/register', 'auth.register', ['title' => 'Register']);
+Route::view('/device', 'device', ['title' => 'Device']);
+Route::view('/profile', 'profile', ['title' => 'Profile']);
+Route::view('/admin', 'admin', ['title' => 'Admin']);
+Route::view('/test', 'test', ['title' => 'Test']);
+
 
 //sensor
-Route::view('/temperature-chilled-water', 'sensor.chilled-water');
-Route::view('/temperature-cooling-water', 'sensor.cooling-water');
-Route::view('/condenser-pressure', 'sensor.condenser');
-Route::view('/evaporator-pressure', 'sensor.evaporator');
-Route::view('/oil-tank', 'sensor.oil-tank');
-Route::view('/oil-capacity', 'sensor.oil-capacity');
-Route::view('/oil-pressure', 'sensor.oil-pressure');
-Route::view('/vane-position', 'sensor.vane-position');
-Route::view('/main-motor-current', 'sensor.main-motor-current');
+Route::view('/temperature-chilled-water', 'sensor.chilled-water', ['title' => 'Temperature Chilled Water']);
+Route::view('/temperature-cooling-water', 'sensor.cooling-water', ['title' => 'Temperature Cooling Water']);
+Route::view('/condenser-pressure', 'sensor.condenser', ['title' => 'Condenser Pressure']);
+Route::view('/evaporator-pressure', 'sensor.evaporator', ['title' => 'Evaporator Pressure']);
+Route::view('/oil-tank', 'sensor.oil-tank', ['title' => 'Oil Tank']);
+Route::view('/oil-capacity', 'sensor.oil-capacity', ['title' => 'Oil Capacity']);
+Route::view('/oil-pressure', 'sensor.oil-pressure', ['title' => 'Oil Pressure']);
+Route::view('/vane-position', 'sensor.vane-position', ['title' => 'Vane Position']);
+Route::view('/main-motor-current', 'sensor.main-motor-current', ['title' => 'Main Motor Current']);
 // Route::get('/device', [Device_dataController::class, 'show']);
