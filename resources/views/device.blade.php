@@ -1,5 +1,5 @@
 @extends('layouts.side-navbar')
- 
+
 @section('content')
 
 <section class="is-hero-bar">
@@ -11,58 +11,58 @@
 </section>
 
 <div class="card mb-6">
-        <header class="card-header">
-            <p class="card-header-title">
-                <span class="icon"><i class="mdi mdi-finance"></i></span>
-                Temperature
-            </p>
-            <a href="#" class="card-header-icon">
-                <span class="icon"><i class="mdi mdi-reload"></i></span>
-            </a>
-        </header>
-        <div class="card-content">
-            <div class="chart-area">
-                <div class="h-full">
-                    <div class="chartjs-size-monitor">
-                        <div class="chartjs-size-monitor-expand">
-                            <div></div>
-                        </div>
-                        <div class="chartjs-size-monitor-shrink">
-                            <div></div>
-                        </div>
-                    </div>
-                    <canvas id="big-line-chart" width="2992" height="1000" class="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
-                </div>
-            </div>
+  <header class="card-header">
+    <p class="card-header-title">
+      <span class="icon"><i class="mdi mdi-finance"></i></span>
+      Temperature
+    </p>
+    <a href="#" class="card-header-icon">
+      <span class="icon"><i class="mdi mdi-reload"></i></span>
+    </a>
+  </header>
+  <div class="card-content">
+    <div class="chart-area">
+      <div class="h-full">
+        <div class="chartjs-size-monitor">
+          <div class="chartjs-size-monitor-expand">
+            <div></div>
+          </div>
+          <div class="chartjs-size-monitor-shrink">
+            <div></div>
+          </div>
         </div>
-    </div>
-
-    <section class="section main-section">
-    <div class="notification blue">
-      <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
-        <div>
-          <span class="icon"><i class="mdi mdi-buffer"></i></span>
-          <b>Responsive table</b>
-        </div>
-        <button type="button" class="button small textual --jb-notification-dismiss">Dismiss</button>
+        <canvas id="big-line-chart" width="2992" height="1000" class="chartjs-render-monitor block" style="height: 400px; width: 1197px;"></canvas>
       </div>
     </div>
-    
-    <div class="card has-table">
-      <header class="card-header">
-        <p class="card-header-title">
-          <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
-          Clients
-        </p>
-        <a href="#" class="card-header-icon">
-          <button class="button small green --jb-modal" data-target="data-form-clien" type="button">
-            <span class="icon"><i class="mdi  mdi-plus"></i></span>
-          </button>
-        </a>
-      </header>
-      <div class="card-content">
-        <table>
-          <thead>
+  </div>
+</div>
+
+<section class="section main-section">
+  <div class="notification blue">
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-3 md:space-y-0">
+      <div>
+        <span class="icon"><i class="mdi mdi-buffer"></i></span>
+        <b>Responsive table</b>
+      </div>
+      <button type="button" class="button small textual --jb-notification-dismiss">Dismiss</button>
+    </div>
+  </div>
+
+  <div class="card has-table">
+    <header class="card-header">
+      <p class="card-header-title">
+        <span class="icon"><i class="mdi mdi-account-multiple"></i></span>
+        Clients
+      </p>
+      <a href="#" class="card-header-icon">
+        <button class="button small green --jb-modal" data-target="modal-add-note" type="button">
+          <span class="icon"><i class="mdi  mdi-plus"></i></span>
+        </button>
+      </a>
+    </header>
+    <div class="card-content">
+      <table>
+        <thead>
           <tr>
             <th class="number-cell">
               <label class="checkbox">
@@ -77,11 +77,11 @@
             <th>Timestamp</th>
             <th></th>
           </tr>
-          </thead>
-          <tbody>
+        </thead>
+        <tbody>
           <tr>
             <td class="sample-number">
-                <span>1.</span>
+              <span>1.</span>
             </td>
             <td class="image-cell">
               <div class="image">
@@ -97,7 +97,7 @@
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                <button class="button small blue --jb-modal" data-target="modal-edit-note" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </button>
                 <button class="button small red --jb-modal" data-target="modal-delete" type="button">
@@ -109,7 +109,7 @@
           <tr>
             <td class="sample-number">
               <span>2.</span>
-          </td>
+            </td>
             <td class="image-cell">
               <div class="image">
                 <img src="https://avatars.dicebear.com/v2/initials/felicita-yundt.svg" class="rounded-full">
@@ -118,13 +118,13 @@
             <td data-label="Name">Felicita Yundt</td>
             <td data-label="Note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, esse.</td>
             <td data-label="Division">TL-01</td>
-            <td data-label="Status"> Complete  </td>
+            <td data-label="Status"> Complete </td>
             <td data-label="Timestamp">
               <small class="text-gray-500" title="Jan 8, 2021">Jan 8, 2021</small>
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                <button class="button small blue --jb-modal" data-target="modal-edit-note" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </button>
                 <button class="button small red --jb-modal" data-target="modal-delete" type="button">
@@ -136,7 +136,7 @@
           <tr>
             <td class="sample-number">
               <span>3.</span>
-          </td>
+            </td>
             <td class="image-cell">
               <div class="image">
                 <img src="https://avatars.dicebear.com/v2/initials/mr-larry-satterfield-v.svg" class="rounded-full">
@@ -151,7 +151,7 @@
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                <button class="button small blue --jb-modal" data-target="modal-edit-note" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </button>
                 <button class="button small red --jb-modal" data-target="modal-delete" type="button">
@@ -163,7 +163,7 @@
           <tr>
             <td class="sample-number">
               <span>4.</span>
-          </td>
+            </td>
             <td class="image-cell">
               <div class="image">
                 <img src="https://avatars.dicebear.com/v2/initials/mr-broderick-kub.svg" class="rounded-full">
@@ -172,13 +172,13 @@
             <td data-label="Name">Mr. Broderick Kub</td>
             <td data-label="Note">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, rerum!</td>
             <td data-label="Division">TE-02</td>
-            <td data-label="Status"> Active</td>
+            <td data-label="Status"> Progress</td>
             <td data-label="Timestamp">
               <small class="text-gray-500" title="Sep 13, 2021">Sep 13, 2021</small>
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                <button class="button small blue --jb-modal" data-target="modal-edit-note" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </button>
                 <button class="button small red --jb-modal" data-target="modal-delete" type="button">
@@ -190,7 +190,7 @@
           <tr>
             <td class="sample-number">
               <span>5.</span>
-          </td>
+            </td>
             <td class="image-cell">
               <div class="image">
                 <img src="https://avatars.dicebear.com/v2/initials/barry-weber.svg" class="rounded-full">
@@ -199,13 +199,13 @@
             <td data-label="Name">Barry Weber</td>
             <td data-label="Note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, nemo.</td>
             <td data-label="Division">TN-02</td>
-            <td data-label="Status"> Active</td>
+            <td data-label="Status"> Progress</td>
             <td data-label="Timestamp">
               <small class="text-gray-500" title="Jul 24, 2021">Jul 24, 2021</small>
             </td>
             <td class="actions-cell">
               <div class="buttons right nowrap">
-                <button class="button small blue --jb-modal"  data-target="modal-edit" type="button">
+                <button class="button small blue --jb-modal" data-target="modal-edit-note" type="button">
                   <span class="icon"><i class="mdi mdi-pencil"></i></span>
                 </button>
                 <button class="button small red --jb-modal" data-target="modal-delete" type="button">
@@ -214,24 +214,134 @@
               </div>
             </td>
           </tr>
-          </tbody>
-        </table>
+        </tbody>
+      </table>
 
-        <div class="table-pagination">
-          <div class="flex items-center justify-between">
-            <div class="buttons">
-              <button type="button" class="button active">1</button>
-              <button type="button" class="button">2</button>
-              <button type="button" class="button">3</button>
-            </div>
-            <small>Page 1 of 3</small>
+      <div class="table-pagination">
+        <div class="flex items-center justify-between">
+          <div class="buttons">
+            <button type="button" class="button active">1</button>
+            <button type="button" class="button">2</button>
+            <button type="button" class="button">3</button>
           </div>
+          <small>Page 1 of 3</small>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-    <!-- <div class="bg-[#F8F8F8] h-screen">
+<div id="modal-delete" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title text-yelow-500">Warning</p>
+    </header>
+    <section class="modal-card-body">
+      <p>The Note will be deleted, and cannot be restored?</p>
+
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button --jb-modal-close">Cancel</button>
+      <button class="button blue --jb-modal-close">Confirm</button>
+    </footer>
+  </div>
+</div>
+
+<div id="modal-add-note" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Form Note</p>
+    </header>
+
+    <section class="modal-card-body">
+      <form method="get">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control icons-left">
+            <textarea id="Note" name="Note" rows="5" cols="75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor!</textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Role</label>
+          <div class="control">
+            <div class="select">
+              <select name="status" required>
+                <option value="" disabled selected hidden>Status</option>
+                <option value="Suspend">Suspend</option>
+                <option value="Progress">Progress</option>
+                <option value="Complete">Complete</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field grouped">
+          <div class="control">
+            <button type="submit" class="button green">
+              Submit
+            </button>
+          </div>
+          <div class="control">
+            <button type="reset" class="button red">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+
+<div id="modal-edit-note" class="modal">
+  <div class="modal-background --jb-modal-close"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">Form Note</p>
+    </header>
+
+    <section class="modal-card-body">
+      <form method="get">
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control icons-left">
+            <textarea id="Note" name="Note" rows="5" cols="75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, dolor!</textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Role</label>
+          <div class="control">
+            <div class="select">
+              <select name="status" required>
+                <option value="" disabled selected hidden>Status</option>
+                <option value="Suspend">Suspend</option>
+                <option value="Progress">Progress</option>
+                <option value="Complete">Complete</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field grouped">
+          <div class="control">
+            <button type="submit" class="button green">
+              Submit
+            </button>
+          </div>
+          <div class="control">
+            <button type="reset" class="button red">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+
+
+<!-- <div class="bg-[#F8F8F8] h-screen">
         <div class="flex justify-between items-center py-4 px-6 bg-white border border-gray-200 rounded-lg shadow m-6 md:mx-12">
             <nav class="flex" aria-label="Breadcrumb">
                 <ol class="inline-flex items-center space-x-1 md:space-x-3">
