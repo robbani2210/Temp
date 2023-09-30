@@ -41,7 +41,7 @@
 
         <div class="navbar-item has-divider">
         <a href="/admin" class="navbar-link">
-          <span>Admin</span>
+          <span>ADMIN</span>
         </a>
         </div>
 

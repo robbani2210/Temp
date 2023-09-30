@@ -400,8 +400,8 @@
               </button>
             </div>
             <div class="control">
-              <button type="reset" class="button red">
-                Reset
+              <button type="cencel" class="button red --jb-modal-close">
+                Cancel
               </button>
             </div>
           </div>
@@ -476,9 +476,9 @@
               <div class="select">
                 <select name="Role" required>
                   <option value="" disabled selected hidden>Role</option>
-                  <option value="coffee">Admin</option>
-                  <option value="coffee">Editor</option>
-                  <option value="coffee">Viewer</option>
+                  <option value="Admin">Admin</option>
+                  <option value="Editor">Editor</option>
+                  <option value="Viewer">Viewer</option>
                 </select>
             </div>
             </div>
@@ -490,8 +490,8 @@
               </button>
             </div>
             <div class="control">
-              <button type="reset" class="button red">
-                Reset
+              <button type="cancel" class="button red --jb-modal-close">
+              Cancel
               </button>
             </div>
           </div>

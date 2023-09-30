@@ -284,7 +284,7 @@
             </button>
           </div>
           <div class="control">
-            <button type="reset" class="button red">
+            <button type="cancel" class="button red --jb-modal-close">
               Cancel
             </button>
           </div>
@@ -330,7 +330,7 @@
             </button>
           </div>
           <div class="control">
-            <button type="reset" class="button red">
+            <button type="cancel" class="button red --jb-modal-close">
               Cancel
             </button>
           </div>
