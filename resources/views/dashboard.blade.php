@@ -3,27 +3,26 @@
 @section('content')
 
 <section class="is-hero-bar">
-  <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
-    <h2 class="title">
-      Dashboard Page
-    </h2>
-  </div>
+    <div class="flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0">
+        <h2 class="title">
+            Dashboard Page
+        </h2>
+    </div>
 </section>
 
 <section class="section main-section">
-    <div class="flex gap-6 grid-cols-1 md:grid-cols-3 mb-6">
+    <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
         <div class="card">
             <div class="card-content">
-                <div class="flex items-center justify-between">
+                <div class="grid items-center justify-between">
                     <div class="widget-label">
                         <h3>
                             Device 1
                         </h3>
                         <p>
-                            High Temp<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Normal<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
@@ -38,9 +37,8 @@
                         </h3>
                         <p>
                             Normal<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
@@ -55,9 +53,8 @@
                         </h3>
                         <p>
                             Normal<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
@@ -71,10 +68,9 @@
                             Device 4
                         </h3>
                         <p>
-                            High Temp<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Normal<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
@@ -88,16 +84,15 @@
                             Device 5
                         </h3>
                         <p>
-                            High Temp<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Normal<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card">
+        <!-- <div class="card">
             <div class="card-content">
                 <div class="flex items-center justify-between">
                     <div class="widget-label">
@@ -106,14 +101,13 @@
                         </h3>
                         <p>
                             Normal<br>
-                            Status 1: 80°C<br>
-                            Status 2: 87°C<br>
-                            Status 3: 93°C<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
 
