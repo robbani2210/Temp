@@ -57,6 +57,17 @@
                 </div>
               </div>
             </div>
+            <div class="field">
+              <label class="label">Division</label>
+              <div class="field-body">
+                <div class="field">
+                  <div class="control">
+                    <input type="division" autocomplete="on" name="email" value="TL-01" class="input" required>
+                  </div>
+                  <p class="help">Required. Your division</p>
+                </div>
+              </div>
+            </div>
             <hr>
             <div class="field">
               <div class="control">

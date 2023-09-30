@@ -92,6 +92,22 @@
                 </div>
             </div>
         </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="flex items-center justify-between">
+                    <div class="widget-label">
+                        <h3>
+                            Device 6
+                        </h3>
+                        <p>
+                            Normal<br>
+                            Temperature: 28.5 °C<br>
+                            Humidity: 58 g/kg<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- <div class="card">
             <div class="card-content">
                 <div class="flex items-center justify-between">
