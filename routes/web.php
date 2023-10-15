@@ -21,27 +21,27 @@ use App\Http\Controllers\LogSheetController;
 //     return view('welcome');
 // });
 
-Route::get('/', [LogSheetController::class, 'show']);
-Route::view('/sensor', 'sensor', ['title' => 'Sensor']);
-Route::view('/about', 'about', ['title' => 'About']);
-Route::view('/login', 'auth.login', ['title' => 'Login']);
-Route::view('/register', 'auth.register', ['title' => 'Register']);
-Route::view('/device', 'device', ['title' => 'Device']);
-Route::view('/profile', 'profile', ['title' => 'Profile']);
-Route::view('/admin', 'admin', ['title' => 'Admin']);
-Route::view('/test', 'test', ['title' => 'Test']);
+Route::get('/', [LogSheetController::class, 'show'])->middleware('auth');
+Route::view('/sensor', 'sensor', ['title' => 'Sensor'])->middleware('auth');
+Route::view('/about', 'about', ['title' => 'About'])->middleware('auth');
+Route::view('/login', 'auth.login', ['title' => 'Login'])->middleware('auth');
+Route::view('/register', 'auth.register', ['title' => 'Register'])->middleware('auth');
+Route::view('/device', 'device', ['title' => 'Device'])->middleware('auth');
+Route::view('/profile', 'profile', ['title' => 'Profile'])->middleware('auth');
+Route::view('/admin', 'admin', ['title' => 'Admin'])->middleware('auth');
+Route::view('/test', 'test', ['title' => 'Test'])->middleware('auth');
 
 
 //sensor
-Route::view('/temperature-chilled-water', 'sensor.chilled-water', ['title' => 'Temperature Chilled Water']);
-Route::view('/temperature-cooling-water', 'sensor.cooling-water', ['title' => 'Temperature Cooling Water']);
-Route::view('/condenser-pressure', 'sensor.condenser', ['title' => 'Condenser Pressure']);
-Route::view('/evaporator-pressure', 'sensor.evaporator', ['title' => 'Evaporator Pressure']);
-Route::view('/oil-tank', 'sensor.oil-tank', ['title' => 'Oil Tank']);
-Route::view('/oil-capacity', 'sensor.oil-capacity', ['title' => 'Oil Capacity']);
-Route::view('/oil-pressure', 'sensor.oil-pressure', ['title' => 'Oil Pressure']);
-Route::view('/vane-position', 'sensor.vane-position', ['title' => 'Vane Position']);
-Route::view('/main-motor-current', 'sensor.main-motor-current', ['title' => 'Main Motor Current']);
+Route::view('/temperature-chilled-water', 'sensor.chilled-water', ['title' => 'Temperature Chilled Water'])->middleware('auth');
+Route::view('/temperature-cooling-water', 'sensor.cooling-water', ['title' => 'Temperature Cooling Water'])->middleware('auth');
+Route::view('/condenser-pressure', 'sensor.condenser', ['title' => 'Condenser Pressure'])->middleware('auth');
+Route::view('/evaporator-pressure', 'sensor.evaporator', ['title' => 'Evaporator Pressure'])->middleware('auth');
+Route::view('/oil-tank', 'sensor.oil-tank', ['title' => 'Oil Tank'])->middleware('auth');
+Route::view('/oil-capacity', 'sensor.oil-capacity', ['title' => 'Oil Capacity'])->middleware('auth');
+Route::view('/oil-pressure', 'sensor.oil-pressure', ['title' => 'Oil Pressure'])->middleware('auth');
+Route::view('/vane-position', 'sensor.vane-position', ['title' => 'Vane Position'])->middleware('auth');
+Route::view('/main-motor-current', 'sensor.main-motor-current', ['title' => 'Main Motor Current'])->middleware('auth');
 // Route::get('/device', [Device_dataController::class, 'show']);
 
 

@@ -71,11 +71,14 @@
               <hr class="navbar-divider">
               <a class="navbar-item">
                 <span class="icon"><i class="mdi mdi-logout"></i></span>
-                <span><form action="/logout" method="post">
+                <form action="/logout" method="post">
                   @csrf
-                  <button type="submit" class="dropdown-item"><i
-                          class="bi bi-box-arrow-right"></i> Logout</button>
-              </form></span>
+                <button type="submit" style="color: black">Logout</button>
+                </form>
+                {{-- <form action="/logout" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item text-black bg-gray-200 py-2 px-4 rounded"> <span>Logout</span></button>
+              </form> --}}
               </a>
             </div>
           </div>
