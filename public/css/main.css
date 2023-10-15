@@ -1687,6 +1687,29 @@ progress::-ms-fill {
     padding-left: .5rem
 }
 
+/* Membuat kartu menjadi satu baris */
+.card {
+    flex: 0 0 auto;
+    min-width: 300px; /* Sesuaikan lebar kartu sesuai kebutuhan */
+}
+
+/* Menambahkan margin kanan pada kartu kecuali yang terakhir */
+.card:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* Stil untuk tombol navigasi */
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
 footer {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity));

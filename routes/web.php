@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Device_dataController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LogSheetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +21,7 @@ use App\Http\Controllers\Device_dataController;
 //     return view('welcome');
 // });
 
-Route::view('/', 'dashboard', ['title' => 'Dashboard']);
+Route::get('/', [LogSheetController::class, 'show']);
 Route::view('/sensor', 'sensor', ['title' => 'Sensor']);
 Route::view('/about', 'about', ['title' => 'About']);
 Route::view('/login', 'auth.login', ['title' => 'Login']);
@@ -40,3 +43,12 @@ Route::view('/oil-pressure', 'sensor.oil-pressure', ['title' => 'Oil Pressure'])
 Route::view('/vane-position', 'sensor.vane-position', ['title' => 'Vane Position']);
 Route::view('/main-motor-current', 'sensor.main-motor-current', ['title' => 'Main Motor Current']);
 // Route::get('/device', [Device_dataController::class, 'show']);
+
+
+// auth -> register bersifat sementara
+Route::get('/sign-in', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/sign-in', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
+
+Route::get('/sign-up', [RegisterController::class, 'index'])->middleware('guest');
+Route::post('/sign-up', [RegisterController::class, 'store']);

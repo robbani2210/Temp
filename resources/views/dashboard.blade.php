@@ -11,7 +11,147 @@
 </section>
 
 <section class="section main-section">
-    <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
+    <div class="m-6 md:mx-10">
+        <h1 class="pt-4 pb-2 px-6 md:text-lg text-[#FFFFFF]">Timestamp: <b>{{ $timestamp }}</b></h1>
+        {{-- <div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0">
+            <button onclick="document.getElementById('SensorList').scrollLeft -= 118"><i class="ph-light ph-caret-left text-3xl text-white"></i></button> --}}
+                {{-- <div id="SensorList" class="mt-4 mx-4 grid gap-6 w-full grid-flow-col overflow-auto no-scrollbar py-2"> --}}
+                    
+                    
+
+                    <div class="overflow-x-auto">
+                        <div class="flex">
+                            <button id="prevBtn">Previous</button>
+                            @foreach ($data as $item)
+                                <div class="card mr-4">
+                                    <div class="card-content">
+                                        <div class="grid items-center justify-between">
+                                            <div class="widget-label">
+                                                <h3>{{ $item['name'] }}</h3>
+                                                <p>{{ $item['value'] }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                            <button id="nextBtn">Next</button>
+                        </div>
+                    </div>
+                    
+                    
+                {{-- </div> --}}
+            {{-- <button onclick="document.getElementById('SensorList').scrollLeft += 118"><i class="ph-light ph-caret-right text-3xl text-white"></i></button>
+        </div> --}}
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 m-6 md:mx-10">
+        <div class="bg-white rounded-lg md:mb-8 p-6">
+            <h1 class="text-lg text-[#625F6E]">Device 1</h1>
+            <div id="lineChart">
+            </div>
+        </div>
+
+        <div class="bg-white rounded-lg mb-8 p-6">
+            <h1 class="text-lg text-[#625F6E]">Device 2</h1>
+            <div id="barChart">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var lineChart = {
+        chart: {
+            height: 350,
+            type: "line",
+            stacked: false
+        },
+        dataLabels: {
+            enabled: false
+        },
+        colors: ["#FF1654"],
+        series: [
+            {
+                name: "Value",
+                data: {!!json_encode(array_map(function($item) {return $item["value"];}, $data))!!}
+            },
+        ],
+        stroke: {
+            curve: "smooth",
+            width: 3
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: "20%"
+            }
+        },
+        xaxis: {
+            categories: {!! json_encode(array_map(function($item) { return $item["name"]; }, $data)) !!}
+        },
+        yaxis: [
+            {
+            axisTicks: {
+                show: true
+            },
+            axisBorder: {
+                show: true,
+                color: "#FF1654"
+            },
+            labels: {
+                style: {
+                colors: "#FF1654"
+                }
+            },
+            title: {
+                text: "Temperature",
+                style: {
+                color: "#FF1654"
+                }
+            }
+            }
+        ],
+        tooltip: {
+            shared: false,
+            intersect: true,
+            x: {
+                show: false
+            }
+        },
+        legend: {
+            horizontalAlign: "left",
+            offsetX: 40
+        }
+        };
+
+        var barChart = {
+            series: [{
+                data: {!! json_encode(array_map(function($item) { return $item["value"]; }, $data)) !!}
+            }],
+            chart: {
+                type: 'bar',
+                height: 350
+            },
+            plotOptions: {
+            bar: {
+                borderRadius: 4,
+                horizontal: true,
+            }
+            },
+                dataLabels: {
+                enabled: false
+            },
+            xaxis: {
+                categories: {!! json_encode(array_map(function($item) { return $item["name"]; }, $data)) !!}
+            },
+        };
+
+        var barChartResult = new ApexCharts(document.querySelector("#barChart"), barChart);
+        var lineChartResult = new ApexCharts(document.querySelector("#lineChart"), lineChart);
+
+        barChartResult.render();
+        lineChartResult.render();
+    </script>
+
+    {{-- <div class="grid gap-6 grid-cols-1 md:grid-cols-3 mb-6">
         <div class="card">
             <div class="card-content">
                 <div class="grid items-center justify-between">
@@ -128,7 +268,7 @@
 
 
 
-    </div>
+    </div> --}}
 
     <div class="card mb-6">
         <header class="card-header">
@@ -242,4 +382,5 @@
             </div>
         </div>
     </div> -->
+    
     @endsection
